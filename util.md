@@ -14,7 +14,7 @@ Reads the specified `path` on the computer, and returns `content` as a string. I
 ## *table* `util.readTable(string path)`
 Reads the specified `path` and returns it as a table, if it can be parsed as a table.
 ## *table* `util.readTableAsJSON(string path)`
-**Requires json.lua**
+**Requires json.lua**  
 Reads JSON content in `path` and returns it as a lua table.
 ## `util.reset()`
 Clears the screen and sets the cursor to 1, 1
@@ -29,5 +29,5 @@ Writes `contents` to the specified `path`.
 ## `util.writeTable(string path, table table)`
 Serializes `table` and writes it to `path`.
 ## `util.writeTableAsJSON(string path, table table)`
-**Requires json.lua**
+**Requires json.lua**  
 Writes `table` to `path` as a JSON string.
