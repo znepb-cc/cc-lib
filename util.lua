@@ -106,32 +106,32 @@ end
 -- Rounds a number to a specified number of decimals.
 -- If the number of decimals isn't provided, it'll round to 0 decimals.
 -- Written with help from Brutal_McLegend.
-function round(input, decimals)
+function util.round(input, decimals)
 	decimals = decimals or 0
 	if decimals < 0 then error("cf.round(n, d) doesn't take a negative decimal count") end
 	local mult = math.pow(10, decimals)
     return math.floor(input * mult + 0.5) / mult
 end
 
-function clearTerm()
+function util.clearTerm()
 	term.clear()
 	term.setCursorPos(1, 1)
 end
 
 -- Get the squared magnitude of a vector.
-function vecMagSq(vector)
+function util.vecMagSq(vector)
 	return vector.x * vector.x + vector.y * vector.y
 end
 
 -- Get the distance between two vectors.
-function dist(a, b)
+function util.dist(a, b)
   local dx = b.pos.x - a.pos.x
   local dy = b.pos.y - a.pos.y
   return util.pythagoras(dx, dy)
 end
 
 -- Reverses the order of the elements in a table.
-function reverseTable(tab)
+function util.reverseTable(tab)
 	reversedTable = {}
 	for i = #tab, 1, -1 do
 		reversedTable[#reversedTable + 1] = tab[i]
@@ -140,7 +140,7 @@ function reverseTable(tab)
 end
 
 -- Removes an element from a table.
-function tableRemove(t, e)
+function util.tableRemove(t, e)
 	for i = 1, #t do
 		if t[i] == e then
 			table.remove(t, i)
@@ -152,13 +152,13 @@ end
 
 -- Prevents the program from crashing after 5 seconds.
 -- Executes faster than 'sleep(0.05)'.
-function yield()
+function util.yield()
 	os.queueEvent("randomEvent")
 	os.pullEvent("randomEvent")
 end
 
 -- Yields when more than t seconds have passed since the last yield. t is 4 by default.
-function tryYield(t)
+function util.tryYield(t)
     t = t or 4
     local currentClock = os.clock()
     if currentClock - previousClock > t then
@@ -168,18 +168,18 @@ function tryYield(t)
 end
 
 -- Re-maps a number from one range to another.
-function map(value, minVar, maxVar, minResult, maxResult)
+function util.map(value, minVar, maxVar, minResult, maxResult)
 	local a = (value - minVar) / (maxVar - minVar)
 	return (1 - a) * minResult + a * maxResult;
 end
 
 -- Gets the number of files inside of a folder.
-function getFileCount(folder)
+function util.getFileCount(folder)
 	return #fs.list(folder)
 end
 
 -- Puts a string in a file inside of a folder.
-function saveData(string, folder, name)	
+function util.saveData(string, folder, name)	
 	-- Creates a folder if it doesn't already exist.
 	if not fs.exists(folder) then
 		fs.makeDir(folder)
@@ -197,7 +197,7 @@ function saveData(string, folder, name)
 end
 
 -- Returns the data of a file as a string.
-function loadData(folder, name)
+function util.loadData(folder, name)
 	local file = fs.open(folder.."/"..name, "r")
 	local string = file.readAll()
 	file.close()
@@ -205,7 +205,7 @@ function loadData(folder, name)
 end
 
 -- Calculates a number between two numbers at a specific increment.
-function lerp(start, end_, amt)
+function util.lerp(start, end_, amt)
   local difference = end_ - start
   local extra = amt * difference
   return start + extra
@@ -213,7 +213,7 @@ end
 
 -- Prints the contents of a table much like 'textutils.serialize(tab)',
 -- but the output is much more readable and it has the option to toggle recursion.
-function printTable(tab, recursive, depth)
+function util.printTable(tab, recursive, depth)
 	recursive = not (recursive == false) -- True by default.
 	depth = depth or 0 -- The depth starts at 0.
 	
