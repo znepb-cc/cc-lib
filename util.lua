@@ -78,4 +78,21 @@ function util.tableContains(tbl, elem)
     return false
 end
 
+--[[
+    Functions:
+    util.resetColorScheme()
+    util.resetCursorPos()
+    util.reset()
+    util.read(path)
+    util.write(path, contents)
+    util.writeTable(path, table)
+    util.readTable(path)
+    util.fetch(url)
+    util.tableContains(tbl, elem)
+
+    JSON functions:
+    util.readTableAsJSON(path)
+    util.writeTableAsJSON(path, tbl)
+]]
+
 return util
