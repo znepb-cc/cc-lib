@@ -46,4 +46,7 @@ Reads JSON content in `path` and returns it as a lua table.
 Writes `table` to `path` as a JSON string.
 
 # Math
-add clamp, randomFloat, pythagoras, round, vecMagSq, dist, map and lerp
+add clamp, randomFloat, pythagoras, round, map and lerp
+
+# Vectors
+add vecMagSq and vecDist
