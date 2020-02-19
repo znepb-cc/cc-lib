@@ -5,7 +5,8 @@ Some libraries for ComputerCraft
 
 ### util.lua
 
-Created by znepb
+Created by znepb  
+Latest version: 1.1
 
 **Dependencies:**
 
