@@ -2,7 +2,7 @@
     "name": "util",
     "author": "znepb",
     "docsURL": "https://github.com/znepb-cc/cc-lib/blob/master/docs/util.md",
-    "baseURL": "",
+    "baseURL": "https://raw.githubusercontent.com/znepb-cc/cc-lib/master/util/",
     "dependencies": [],
     "optionalDependencies": [
         "json.lua"
