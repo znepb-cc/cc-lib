@@ -48,5 +48,5 @@ Writes `table` to `path` as a JSON string.
 # Math
 add clamp, randomFloat, pythagoras, round, map and lerp
 
-# Vectors
+# Vector
 add vecMagSq and vecDist
